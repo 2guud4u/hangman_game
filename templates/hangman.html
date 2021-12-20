@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Let's Play Hangman</title>
+        <title>Hangman </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hangman.css') }}">
+      
+    </head>
+    <body>
+<div name="content">
+  <div name = "images" value="images">
+      {% if healthy==6 %}
+      <img src="{{url_for('static', filename='Hangman1.png')}}">
+      {% endif %}
+      {% if healthy==5 %}
+        <img src="{{url_for('static', filename='Hangman2.png')}}">
+      {% endif %}
+      {% if healthy==4 %}
+        <img src="{{url_for('static', filename='Hangman3.png')}}">
+      {% endif %}
+      {% if healthy==3 %}
+        <img src="{{url_for('static', filename='Hangman4.png')}}">
+      {% endif %}
+      {% if healthy==2 %}
+        <img src="{{url_for('static', filename='Hangman5.png')}}">
+      {% endif %}
+      {% if healthy==1 %}
+        <img src="{{url_for('static', filename='Hangman6.png')}}">
+      {% endif %}
+      {% if healthy==0 %}
+        <img src="{{url_for('static', filename='Hangman7.png')}}">
+      {% endif %}
+
+      
+  </div>
+
+
+
+<div class="inline">
+  <TextBox>The Computer Guesses: </TextBox>
+    {% if next_letter %}
+          <TextBox> {{next_letter}} </TextBox>
+    {% endif %}
+</div>
+
+
+
+		<form class="form" autocomplete="off" spellcheck="false" method="POST" action="/word">
+
+
+
+
+
+
+  <div class='inline'>
+    {% for num in range(0, data) %}
+      {% if progress[num] == "." %}
+        <input type="checkbox" name={{num}}/>
+   {% endif %}
+        {% if progress[num] != "." %}
+        <TextBox value={{progress[num]}} name={{num}}> {{progress[num] }} </TextBox>
+   {% endif %}
+        <!-- <button  value="." id={{ (num) }} name = {{ (num) }}>_</button> -->
+    {% endfor %}
+
+
+</div>
+     <input  type="submit">
+     </form>
+
+
+    <p>Letters already guessed</p>
+    <ul>
+      
+      {% for letter in guessed %}
+        <li> {{letter }} </li>
+    {% endfor %}
+
+      </ul>
+
+
+
+    </body>
+</div>
+</html> 
+

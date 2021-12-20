@@ -1,0 +1,11 @@
+https://www.kaggle.com/rtatman/english-word-frequency
+
+Pseudocode:
+1. Asks # of letters in word
+2. Displays that number of blanks and blank hangman
+3. Guesses most frequent letter from words matching that length
+3a. Note - Categorize dataset into words by number of letters for speed
+4. User clicks blanks where  letters appear in word, clicks enter when done (clicks nowhere if not in word)
+5. Narrow down dataset to words that have letters in the right place, recalculate frequency
+6. Repeat 4-5 until word is guessed or loses
+7. Display win/lose/try again

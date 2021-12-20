@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Welcome to Hangman</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+	<div id="content" class="homepage-content">
+		<h1 class="title">Let's Play Hangman!! </h1>
+
+		<!-- <p><a class=button href="question.html">Create Forum</a></p>  -->
+
+
+		<form class="form" autocomplete="off" spellcheck="false" method="POST" action="/length">
+			<p> <label for="name">How many letters are in the word?</label> </p>
+            <!-- <input onclick="window.location.href = 'https://re-slo-hacks.snake1324.repl.co/hangman.html';" type="submit"> -->
+
+        <label>Length of word</label>  
+            <select id="answer" name="answer">  
+                <option value = "1"> 1 
+                </option>  
+                <option value = "2"> 2   
+                </option>  
+                <option value = "3"> 3  
+                </option>  
+                <option value = "4"> 4  
+                </option>  
+                <option value = "5"> 5  
+                </option> 
+                <option value = "6"> 6  
+                </option> 
+                <option value = "7"> 7  
+                </option> 
+                <option value = "8"> 8  
+                </option> 
+                <option value = "9"> 9  
+                </option> 
+                <option value = "10"> 10  
+                </option> 
+            </select>  
+            <!-- <a href="/hangman">Use</a>  -->
+            <!-- <input onclick="window.location.href = 'https://re-slo-hacks.snake1324.repl.co/hangman.html';" type="submit"> -->
+            <input onclick="window.location.href = hangman.html;" type="submit">
+            
+        </form>
+
+
+</div>
+          
+        </div>
+    </body>
+</html>
